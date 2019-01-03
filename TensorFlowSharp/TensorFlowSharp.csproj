@@ -1,7 +1,13 @@
 <Project Sdk="Microsoft.NET.Sdk">
 
   <PropertyGroup>
-    <TargetFrameworks>net471;netstandard2.0</TargetFrameworks>
+    <!-- <TargetFrameworks>net471;netstandard2.0</TargetFrameworks> -->
+    <!-- <TargetFrameworks>net462;netstandard2.0</TargetFrameworks> -->
+    <TargetFrameworks>net462</TargetFrameworks>
+    <!-- <TargetFrameworks>net462;netstandard2.0</TargetFrameworks> -->
+    <!-- <TargetFrameworkVersion>v4.6.2</TargetFrameworkVersion> -->
+    
+
     <RootNamespace>TensorFlowSharp</RootNamespace>
     <AssemblyName>TensorFlowSharp</AssemblyName>
     <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
@@ -24,6 +30,8 @@
     <Owners>Miguel de Icaza</Owners>
     <Summary>.NET API for TensorFlow, Google's Machine Intelligence framework</Summary>
     <PackageReleaseNotes>1.11.0 adds support for the TensorFlow 1.11 release</PackageReleaseNotes>
+    <LangVersion>default</LangVersion>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
   </PropertyGroup>
 
   <ItemGroup>

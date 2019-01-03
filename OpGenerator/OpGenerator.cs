@@ -286,23 +286,26 @@ class OpGenerator
 		var lines = text.Split ('\n');
 		var open = true;
 
-		string Quote (string input)
-		{
-			var p = input.IndexOf ('`');
-			if (p == -1)
-				return input;
-			var res = new StringBuilder ();
-			foreach (var c in input) {
-				if (c == '`') {
-					res.Append (open ? "<c>" : "</c>");
-					open = !open;
-				} else
-					res.Append (c);
-			}
-			return res.ToString ();
-		}
+        string Quote(string input)
+        {
+            var p = input.IndexOf('`');
+            if (p == -1)
+                return input;
+            var res = new StringBuilder();
+            foreach (var c in input)
+            {
+                if (c == '`')
+                {
+                    res.Append(open ? "<c>" : "</c>");
+                    open = !open;
+                }
+                else
+                    res.Append(c);
+            }
+            return res.ToString();
+        }
 
-		bool blockOpen = true;
+        bool blockOpen = true;
 		foreach (var line in lines) {
 			if (line.IndexOf ("in image height coordinates.") != -1) {
 				Console.WriteLine ("Hello");
